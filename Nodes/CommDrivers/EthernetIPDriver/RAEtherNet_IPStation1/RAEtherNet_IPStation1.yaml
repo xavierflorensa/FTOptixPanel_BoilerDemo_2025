@@ -1,0 +1,153 @@
+Name: RAEtherNet_IPStation1
+Id: g=ccbef03b3fec7f38df22940e32b8438c
+Type: RAEtherNetIPStation
+Children:
+- Name: Route
+  Id: g=ffbd6222f2b3d9a391ca47d1e13e5b39
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "172.17.8.90"
+- Name: StationStatusVariables
+  Id: g=a16ce1a4b81ada238a7468b9485ce2d7
+  Type: PropertyGroup
+  Children:
+  - Name: ActiveDataItems
+    Id: g=47691028f85450766ef03cdb2f613ca3
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: ActivityCounter
+    Id: g=2f2f22006a69e5b93ae2980efda1cc7c
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: CatalogNumber
+    Id: g=272f431f34b547965d3134648d7e4958
+    Type: BaseDataVariableType
+    DataType: String
+    AccessLevel: Read
+  - Name: ControllerName
+    Id: g=f21d0674b52f2e476e12397ae3fe9379
+    Type: BaseDataVariableType
+    DataType: String
+    AccessLevel: Read
+  - Name: FailedDataItems
+    Id: g=57d4053afea3af70f3d4fa35fdc13fe6
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: MajorRev
+    Id: g=aa370eec677b5d3739f054e90a90818d
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: MinorRev
+    Id: g=0fce09e9fde69717fa2bc568666cf798
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: Mode
+    Id: g=ff3953046f5883d109d353a0050deaa7
+    Type: BaseDataVariableType
+    DataType: String
+    AccessLevel: Read
+  - Name: OptimizedBlocks
+    Id: g=85e2bbed3115da947ba9212807d13b4e
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: Path
+    Id: g=5bd8fd05a9f7f64641a786f129b84d5f
+    Type: BaseDataVariableType
+    DataType: String
+    AccessLevel: Read
+  - Name: Present
+    Id: g=da93e31166aca7decab54af924aafd4b
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: ProductCode
+    Id: g=546d2565df0bd87e72f8cc9a33e67eda
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: ProductType
+    Id: g=c97f0e185334fdee507c0dd2e40d9afe
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: RecoverableMajorFaults
+    Id: g=9c4fc06700a627d1b02453f612e849b0
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: RecoverableMinorFaults
+    Id: g=e1e70b666fdb50284f0662b8ee856ca8
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: RunMode
+    Id: g=db27bbc9c6ae337939b98c6c4f345df1
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: Synchronized
+    Id: g=ca86dda9d659f2a1752a1a6dafadcf96
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: SyncState
+    Id: g=2ca987572f55fe402239f510378e50ce
+    Type: BaseDataVariableType
+    DataType: String
+    AccessLevel: Read
+  - Name: UnrecoverableMajorFaults
+    Id: g=fb1aed640105d57d20e03a55b08cc26f
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: UnrecoverableMinorFaults
+    Id: g=e0eb26501d484e040736756b1c90679b
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: Vendor
+    Id: g=b79758db0a8fd2e7b2466ab024da3684
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+- Name: OperationCode
+  Id: g=58e625604418880fde4eead8fb53039f
+  Type: BaseDataVariableType
+  DataType: CommunicationOperationCode
+  AccessLevel: Read
+- Class: Reference
+  Target: ns=7;i=29
+  Direction: Forward
+- Class: Reference
+  Target: ns=7;i=30
+  Direction: Forward
+- Class: Reference
+  Target: ns=7;i=67
+  Direction: Forward
+- Class: Reference
+  Target: ns=7;i=31
+  Direction: Forward
+- Class: Reference
+  Target: ns=7;i=94
+  Direction: Forward
+- Class: Reference
+  Target: ns=7;i=96
+  Direction: Forward
+- File: Tags/Tags.yaml
+- Name: Types
+  Id: g=c8f4ddb4f3777814294756b8b5bda619
+  Type: FolderType
+  Children:
+  - File: DataTypes/DataTypes.yaml
+  - File: VariableTypes/VariableTypes.yaml
+- Name: EnableExtendedProperties
+  Id: g=8f6a447bb23a4890569bde674ace237b
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Value: true

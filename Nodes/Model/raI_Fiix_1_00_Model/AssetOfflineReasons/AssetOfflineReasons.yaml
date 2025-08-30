@@ -1,0 +1,244 @@
+Name: AssetOfflineReasons
+Id: g=625916779afe7a7cdeb67c459300e4ae
+Type: FolderType
+Children:
+- Name: Broken
+  Id: g=c19b6daed00c4d55ad3c00d42a8da7e5
+  Type: AssetOfflineReason
+  Children:
+  - Name: id
+    Id: g=5fd8b89109bee74454d12df49eb4a1b2
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 360957
+  - Name: strName
+    Id: g=78b72cc05e5c177a005075cf3be3b9e3
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Broken"
+  - Name: dtUpdated
+    Id: g=37f3deed515b65cb39ab9627bd1f25ab
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Value: "2023-01-30T07:21:55.0430000"
+  - Name: strUuid
+    Id: g=25c6a5a3383de69663be87effdb658da
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "d20f794a-cea7-4616-8d5a-336ecd91e7b1"
+- Name: In storage
+  Id: g=0d3678b27bbe45f193368ef1d9907119
+  Type: AssetOfflineReason
+  Children:
+  - Name: id
+    Id: g=cac8710312e35fa6beccdd97370bb198
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 360958
+  - Name: strName
+    Id: g=7b121e108d3e31293cc94404c401c280
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "In storage"
+  - Name: dtUpdated
+    Id: g=d6c17582722b3d79f930353864889d8d
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Value: "2023-01-30T07:21:55.0610000"
+  - Name: strUuid
+    Id: g=39944ef830d49c6c82b8af7cc3f58215
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "8b0f9b55-75ee-4f93-ba4f-b7ee64429832"
+- Name: Idle
+  Id: g=f6bff0231d734e41b5e1214da38030f3
+  Type: AssetOfflineReason
+  Children:
+  - Name: id
+    Id: g=c0ad222e8f14e4e37c26b507f9db97d1
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 360959
+  - Name: strName
+    Id: g=fd7a09c3caa83b0c00624a2de84a40f9
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Idle"
+  - Name: dtUpdated
+    Id: g=849c87a60514ce191a582e4a30115301
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Value: "2023-01-30T07:21:55.0760000"
+  - Name: strUuid
+    Id: g=03a64fa097c8add2ec1f228e1fbcfb01
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "80a36087-024e-4ae7-a84a-84db3571dce0"
+- Name: Retired
+  Id: g=1266cbee13414cc28c81def979647641
+  Type: AssetOfflineReason
+  Children:
+  - Name: id
+    Id: g=1dd149abb23a416c39630a93f69bf1c7
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 360960
+  - Name: strName
+    Id: g=bc9d49a7f443c1258649bf3c7a416257
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Retired"
+  - Name: dtUpdated
+    Id: g=8850e6be58c7cee774fa9146ac1ea4df
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Value: "2023-01-30T07:21:55.0910000"
+  - Name: strUuid
+    Id: g=4ca733c1ab0821c08e11481c870405b8
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "dcfee771-b2d1-4d51-a63f-c2e4be0aeb99"
+- Name: Under repair
+  Id: g=b5c6829eaf6949489f6e9c9a398c694e
+  Type: AssetOfflineReason
+  Children:
+  - Name: id
+    Id: g=d6895cef10aa935894a642b14df582aa
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 360961
+  - Name: strName
+    Id: g=50a366c7e93c9ffd9d5803cc1bf859bc
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Under repair"
+  - Name: dtUpdated
+    Id: g=e610b923a01171fcb1afe9e54ce9ae48
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Value: "2023-01-30T07:21:55.1080000"
+  - Name: strUuid
+    Id: g=ce9d1f7f6c0a90eb871c18cb35fa856c
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "57a56bba-07eb-4d3d-b474-ef5dabd2dea9"
+- Name: Damaged
+  Id: g=5f30752dabe0459aa00d77c7b294dcb6
+  Type: AssetOfflineReason
+  Children:
+  - Name: id
+    Id: g=4b4d5b41caf14c05c65ccbc287dd6ea5
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 360962
+  - Name: strName
+    Id: g=6897e30b0954da9d9da4e3fdac4c25ac
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Damaged"
+  - Name: dtUpdated
+    Id: g=c487a91db2c3643726ce81552a13eeb0
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Value: "2023-01-30T07:22:00.5800000"
+  - Name: strUuid
+    Id: g=a802ebb48fa0db6d5537f5e2266cf5ab
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "158c921d-3a25-4072-ad03-c863a16c68c9"
+- Name: Under Repair
+  Id: g=5750ad95906d4f5894d4367999a0d74a
+  Type: AssetOfflineReason
+  Children:
+  - Name: id
+    Id: g=3e00a86190a043233711b92492b504af
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 360963
+  - Name: strName
+    Id: g=5fe4343a5f0684c032a80d0ad9a5ce8d
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Under Repair"
+  - Name: dtUpdated
+    Id: g=2933eaeedbfbc6f0dd40dd9100e0b781
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Value: "2023-01-30T07:22:00.6150000"
+  - Name: strUuid
+    Id: g=2e677ac60f129c1499d26ff3d55cc4f9
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "ba1984bd-6edb-457f-bbdb-a5ef660d5557"
+- Name: In Storage
+  Id: g=53c80bec24ed46dbb89e99ba3a086d69
+  Type: AssetOfflineReason
+  Children:
+  - Name: id
+    Id: g=e060a75142c8a63a34eeb5c7b7ab4774
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 360964
+  - Name: strName
+    Id: g=5d96c42f46b2f1433a4e8743c0092e87
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "In Storage"
+  - Name: dtUpdated
+    Id: g=657cdbacb37552517edbb45105b38cec
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Value: "2023-01-30T07:22:00.7150000"
+  - Name: strUuid
+    Id: g=dafade0980bf3fed6daee12735850c7f
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "15480a21-b821-4fa4-95d5-a92d0f69f088"
+- Name: Replaced
+  Id: g=9c107145745646d89eb9303a8258f974
+  Type: AssetOfflineReason
+  Children:
+  - Name: id
+    Id: g=e9a728a99636393aa1b891a37fa3eebb
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 360965
+  - Name: strName
+    Id: g=dd3aef4e23cafdbfdb1ad74828946076
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Replaced"
+  - Name: dtUpdated
+    Id: g=e2be6dcb15236be7ca837762b31b87ad
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Value: "2023-01-30T07:22:00.7310000"
+  - Name: strUuid
+    Id: g=e12885bf7b401f05a140073636ed92d5
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "3cd30323-d10a-4642-af66-9fef517a35e2"
+- Name: Sold
+  Id: g=d3f7cd05a11842448d4c7205b3f042e6
+  Type: AssetOfflineReason
+  Children:
+  - Name: id
+    Id: g=807958b0ad5ec6460040909cd628057b
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 360966
+  - Name: strName
+    Id: g=50b5edc5f05580f9506e792c5bd62342
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Sold"
+  - Name: dtUpdated
+    Id: g=07e1b4d940b54dc40d8a64ba7fcceba2
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Value: "2023-01-30T07:22:00.7960000"
+  - Name: strUuid
+    Id: g=010847ebb43d15675e6cf3071e0ecb12
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "ac15442b-d29e-479d-b918-bde7a2f997d9"

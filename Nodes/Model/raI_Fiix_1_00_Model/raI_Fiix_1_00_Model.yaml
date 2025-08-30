@@ -1,0 +1,182 @@
+Name: raI_Fiix_1_00_Model
+Id: g=8d338313daefe5282ff780ea70d51259
+Type: FolderType
+Children:
+- File: Assets/Assets.yaml
+- File: AssetCategories/AssetCategories.yaml
+- File: AssetEventTypes/AssetEventTypes.yaml
+- File: AssetOfflineReasons/AssetOfflineReasons.yaml
+- File: AssetOnlineReasons/AssetOnlineReasons.yaml
+- File: Template/Template.yaml
+- Name: MeterReadingDataLogger
+  Id: g=68f665c54d05de3f3d0ad730233dfb31
+  Type: DataLogger
+  Children:
+  - Name: SamplingMode
+    Id: g=79923e7e6e368d47979c699218f752bc
+    Type: PropertyType
+    DataType: SamplingModeEnum
+    Value: 2
+  - Name: Store
+    Id: g=a1d6e16532ebc171d0fcbad809a0f4c5
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/FTOptixPanel_BoilerDemo_2025/Model/raI_Fiix_1_00_Model/MeterReadingDataStore"
+    Children:
+    - Name: Kind
+      Id: g=6774b00d9b81c6f10a2b63fa0f2e86d9
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/Store"
+  - Name: VariablesToLog
+    Id: g=6a80738fdebf2386c50de1daf6a7090f
+    Type: BaseObjectType
+  - Class: Reference
+    Target: ns=13;i=21
+    Direction: Forward
+  - Name: LogLocalTime
+    Id: g=8cf40d12a133638d2b78d03b63c55db3
+    Type: PropertyType
+    DataType: Boolean
+    Value: true
+  - Name: SamplingPeriod
+    Id: g=744d0440d86968e1b5b129703c3cb450
+    Type: PropertyType
+    DataType: Duration
+    Value: "0:00:00:10.0000000"
+  - Name: PollingPeriod
+    Id: g=09cf1c8e5b08d703ac653ea6a526de10
+    Type: PropertyType
+    DataType: Duration
+    Value: "0:00:00:00.5000000"
+  - Name: DefaultDeadBandValue
+    Id: g=ef788b3dcea2bf84dc2fc154d4229eb6
+    Type: PropertyType
+    DataType: Double
+- Name: MeterReadingDataStore
+  Id: g=0c6d31561439d572a6ee0886b851ba23
+  Type: SQLiteStore
+  Children:
+  - Name: Tables
+    Id: g=5672801a1fb27d0b7aa55a6a6d763ac9
+    Type: BaseObjectType
+    Children:
+    - Name: MeterReadingDataLogger
+      Id: g=b9f1ca46e5885fc511ab1a121042e82b
+      Type: SQLiteStoreTable
+      Children:
+      - Class: Reference
+        Target: ns=17;i=12
+        Direction: Forward
+      - Class: Reference
+        Target: ns=17;i=15
+        Direction: Forward
+      - Class: Reference
+        Target: ns=17;i=21
+        Direction: Forward
+      - Class: Reference
+        Target: ns=17;i=20
+        Direction: Forward
+      - Name: Columns
+        Id: g=c01c9796ea4a938bc3b1a4fe45b76c57
+        Type: BaseObjectType
+        Children:
+        - Name: Timestamp
+          Id: g=1760c8d37b4434bc31ee8684dd16b142
+          Type: StoreColumn
+          DataType: UtcTime
+        - Name: LocalTimestamp
+          Id: g=5c049b4ea62923f45f4f922fd861133f
+          Type: StoreColumn
+          DataType: DateTime
+  - Class: Reference
+    Target: ns=33;i=30
+    Direction: Forward
+  - Class: Reference
+    Target: ns=33;i=33
+    Direction: Forward
+  - Name: MaxColumnNameLength
+    Id: g=cfe329af59bb0fae19c290f579128a19
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: MaxColumnCount
+    Id: g=870127e06a33ee6fe074029f83ac69da
+    Type: BaseDataVariableType
+    DataType: UInt32
+    AccessLevel: Read
+  - Name: DataTypeCompatibilityMap
+    Id: g=d603372cb4ae08e93fcae79fc6d38156
+    Type: BaseDataVariableType
+    DataType: NodeId
+    AccessLevel: Read
+    ValueRank: OneOrMoreDimensions
+    ArrayDimensions: [0,0]
+  - Name: Status
+    Id: g=c21969d15ee44555882110e7c9662a03
+    Type: PropertyType
+    DataType: StoreStatus
+    AccessLevel: Read
+    Value: 2
+  - Class: Reference
+    Target: ns=17;i=22
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=6
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=8
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=25
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=38
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=41
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=44
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=53
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=55
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=57
+    Direction: Forward
+  - Class: Reference
+    Target: ns=17;i=59
+    Direction: Forward
+  - Name: Filename
+    Id: g=d3a41ba5e1cb489640ef458e1b24bc05
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "MeterReadingDataStore"
+- Name: MeterReadingUnits
+  Id: g=834d159253ccb6bfcd4cf4c527f164fe
+  Type: EngineeringUnitDictionary
+  DataType: EngineeringUnitDictionaryItem
+  ValueRank: OneDimension
+  ArrayDimensions: [0]
+  Value: [{"TypeId":{"Id":239,"Namespace":1},"Body":{"UnitId":743237,"DisplayName":{"LocaleId":"en-US","Text":"ºC"},"Description":{"LocaleId":"en-US","Text":"Fiix_Celsius"},"PhysicalDimension":0,"Slope":0.0,"Intercept":0.0}},{"TypeId":{"Id":239,"Namespace":1},"Body":{"UnitId":640137,"DisplayName":{"LocaleId":"en-US","Text":"l"},"Description":{"LocaleId":"en-US","Text":"Fiix_Litres"},"PhysicalDimension":0,"Slope":0.0,"Intercept":0.0}},{"TypeId":{"Id":239,"Namespace":1},"Body":{"UnitId":640136,"DisplayName":{"LocaleId":"en-US","Text":"rev"},"Description":{"LocaleId":"en-US","Text":"Fiix_Revolutions"},"PhysicalDimension":0,"Slope":0.0,"Intercept":0.0}},{"TypeId":{"Id":239,"Namespace":1},"Body":{"UnitId":640139,"DisplayName":{"LocaleId":"en-US","Text":"m"},"Description":{"LocaleId":"en-US","Text":"Fiix_Meters"},"PhysicalDimension":0,"Slope":0.0,"Intercept":0.0}},{"TypeId":{"Id":239,"Namespace":1},"Body":{"UnitId":640138,"DisplayName":{"LocaleId":"en-US","Text":"g"},"Description":{"LocaleId":"en-US","Text":"Fiix_Gallons"},"PhysicalDimension":0,"Slope":0.0,"Intercept":0.0}},{"TypeId":{"Id":239,"Namespace":1},"Body":{"UnitId":640141,"DisplayName":{"LocaleId":"en-US","Text":"kPa"},"Description":{"LocaleId":"en-US","Text":"Fiix_Kilopascals"},"PhysicalDimension":0,"Slope":0.0,"Intercept":0.0}},{"TypeId":{"Id":239,"Namespace":1},"Body":{"UnitId":640140,"DisplayName":{"LocaleId":"en-US","Text":"mi"},"Description":{"LocaleId":"en-US","Text":"Fiix_Miles"},"PhysicalDimension":0,"Slope":0.0,"Intercept":0.0}},{"TypeId":{"Id":239,"Namespace":1},"Body":{"UnitId":640143,"DisplayName":{"LocaleId":"en-US","Text":"cycles"},"Description":{"LocaleId":"en-US","Text":"Fiix_Cycles"},"PhysicalDimension":0,"Slope":0.0,"Intercept":0.0}},{"TypeId":{"Id":239,"Namespace":1},"Body":{"UnitId":640142,"DisplayName":{"LocaleId":"en-US","Text":"PSI"},"Description":{"LocaleId":"en-US","Text":"Fiix_PSI"},"PhysicalDimension":0,"Slope":0.0,"Intercept":0.0}},{"TypeId":{"Id":239,"Namespace":1},"Body":{"UnitId":640135,"DisplayName":{"LocaleId":"en-US","Text":"ph"},"Description":{"LocaleId":"en-US","Text":"Fiix_ProductionHours"},"PhysicalDimension":0,"Slope":0.0,"Intercept":0.0}},{"TypeId":{"Id":239,"Namespace":1},"Body":{"UnitId":640134,"DisplayName":{"LocaleId":"en-US","Text":"h"},"Description":{"LocaleId":"en-US","Text":"Fiix_Hours"},"PhysicalDimension":0,"Slope":0.0,"Intercept":0.0}},{"TypeId":{"Id":239,"Namespace":1},"Body":{"UnitId":640144,"DisplayName":{"LocaleId":"en-US","Text":"km"},"Description":{"LocaleId":"en-US","Text":"Fiix_Kilometers"},"PhysicalDimension":0,"Slope":0.0,"Intercept":0.0}}]
+- Name: ns=23;LibraryReference
+  Id: g=9e12ca1ee6b309ee179b4841cc113c08
+  Type: ObjectLibraryReference
+  DataType: ObjectLibraryReferenceDataType
+  Value: 
+   {
+    "TypeId": {
+     "Id": 72,
+     "Namespace": 23
+    },
+    "Body": {
+     "libraryGuid": "8a9c64e7c7f6d51fe56d22b946637243",
+     "objectGuid": "2af85ca3e002b8b1ee00f82cd9899505",
+     "objectVersion": 1,
+     "highestIgnoredVersion": 0
+    }
+   }

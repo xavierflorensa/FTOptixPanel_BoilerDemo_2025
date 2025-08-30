@@ -1,0 +1,475 @@
+Name: Template
+Id: g=d05251276fb5efd78512e4dc201b99e5
+Type: FolderType
+Children:
+- Name: FiixGatewayDesigntimeLogic
+  Id: g=bfab3a869a2e8db65a6fd230488a7379
+  Type: NetLogic
+  Children:
+  - Name: BehaviourStartPriority
+    Id: g=55e4da05e86ac1f802b60e0d2ef18495
+    Type: BehaviourStartPriorityVariableType
+    DataType: Byte
+    Value: 180
+  - Name: Cfg_AccessKey
+    Id: g=e1088f11fb0b78cd55f383211f2f4b86
+    Type: BaseDataVariableType
+    DataType: Password
+    Description: {"LocaleId":"en-US","Text":"Retrieved from Fiix MA Connect API Application settings"}
+    Value: "macmmsaakp38443b7dac7b35b7c33cb458623f1902d3e3b46d0131543cb86"
+  - Name: Cfg_AppKey
+    Id: g=80d8b83b6c786aa702fff28ce0ae4415
+    Type: BaseDataVariableType
+    DataType: Password
+    Description: {"LocaleId":"en-US","Text":"Retrieved from Fiix MA Connect API Application settings"}
+    Value: "macmmsackp38468ece00e64bad1a083ffd808bc9ebd89dac80247a4faa8a8736161"
+  - Name: Cfg_FiixURL
+    Id: g=5e089edf8fa521b721473df3ec8aa6d0
+    Type: BaseDataVariableType
+    DataType: String
+    Description: {"LocaleId":"en-US","Text":"Base URL of the Fiix instance, for example: https://abc.macmms.com"}
+    Value: "https://risouliberica.macmms.com"
+  - Name: Cfg_SecretKey
+    Id: g=ff68c6c38053bd6ece6f0d5267d34d9f
+    Type: BaseDataVariableType
+    DataType: Password
+    Description: {"LocaleId":"en-US","Text":"Retrieved from Fiix MA Connect API Application settings"}
+    Value: "macmmsaskp38433ff340d2d269d0a9ba7dc60db7398e1967fc5cc89102cfb79a1712d47fa84e3"
+  - Name: Set_FilterSiteNames
+    Id: g=a171ed6124501c90b9650458b91b552c
+    Type: BaseDataVariableType
+    DataType: String
+    Description: {"LocaleId":"en-US","Text":"Part of name(s) used to filter Site, under which the assets are to be synced, seperated with comma."}
+  - Name: Set_DeleteExtraNodes
+    Id: g=61a99a4c55aa010a3cf9f0a6d98e23a7
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Description: {"LocaleId":"en-US","Text":"When an asset in Optix does not have corresponding Fiix one during synronization, this boolean flag decides if the asset should be removed from Optix data model. Turn off when you are doing a partial sync."}
+    Value: true
+  - Name: Sts_LastExecutionResult
+    Id: g=c05503d333f3206f555d45027b0da0a0
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "2 new and 0 synced sites; 9 new and 0 synced assets"
+  - Name: Sts_LastExecutionDatetime
+    Id: g=16f4d0af656251cfdf6cac37654bad46
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Value: "2025-02-08T20:53:26.5677616"
+  - Name: Set_FilterAssetNames
+    Id: g=6b0e6e0f0ec67d87427eb9209d63779c
+    Type: BaseDataVariableType
+    DataType: String
+    Description: {"LocaleId":"en-US","Text":"Part of name(s) used to filter the assets (not include location, facility) which are to be synced from Fiix to Optix, seperated with comma."}
+  - Name: Set_FilterEnabledAssetCategoryOnly
+    Id: g=39b92f0ebf801d219ebb9b26581ab4dc
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Description: {"LocaleId":"en-US","Text":"When this is set to True, Optix will sync only the assets with its AssetCategory being enabled. User can flag an Asset Category as Enabled by locating the Asset Category in the “AssetCategories” folder under the gateway folder. then set the “Cfg_enabled” property to True."}
+  - Class: Method
+    Name: SyncAssets
+    Id: g=093c89069a29f1bf6a717076e2bd3fe3
+  - Class: Method
+    Name: SyncCategoriesTypesUnits
+    Id: g=66b5dd6c6489faefe11667321c585021
+- Name: FiixGatewayRuntimeLogic
+  Id: g=7136a1d6399b94b1f654a8b8b9a5217f
+  Type: NetLogic
+  Children:
+  - Name: Sts_LastExecutionResult
+    Id: g=f2c0c2f289cf33489b0836907248a82b
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: Sts_LastExecutionDatetime
+    Id: g=31e3c43219f9f3732b05657efa8ec892
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Value: "2000-01-01T00:00:00.0000000"
+  - Name: Cfg_DataLogger
+    Id: g=e81dd25b18a99ac3d073c6d93edec0d8
+    Type: NodePointer
+    DataType: NodeId
+    Description: {"LocaleId":"en-US","Text":"Reference to the MeterReadingDataLogger object in the same folder."}
+    Value: "/Objects/FTOptixPanel_BoilerDemo_2025/Model/raI_Fiix_1_00_Model/MeterReadingDataLogger"
+    Children:
+    - Name: Kind
+      Id: g=b3f739d06d81005c8babb95f34e40b68
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/DataLogger"
+  - Name: Cfg_PushFullSample
+    Id: g=1329b9a30a858e3de1989f039370b412
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Description: {"LocaleId":"en-US","Text":"Enable pushing all logged tags values even some have no update. Not in use with Fiix integration"}
+  - Name: Cfg_PreserveDataLoggerHistory
+    Id: g=00691714356c9fe767ed741adc5204ff
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Description: {"LocaleId":"en-US","Text":"If True, the data is sent and historicized. If False, every time the data is transferred to the auxiliary store, the data is deleted from the data logger."}
+    Value: true
+  - Name: Cfg_MaximumStoreCapacity
+    Id: g=e6e6e4149ee22ee3143718d87c338e7a
+    Type: BaseDataVariableType
+    DataType: Int32
+    Description: {"LocaleId":"en-US","Text":"The maximum capacity of the auxiliary store used by the Push Agent."}
+    Value: 10000
+  - Name: Cfg_MaximumItemsPerPacket
+    Id: g=84eba246a5f70764db826e706f07798d
+    Type: BaseDataVariableType
+    DataType: Int32
+    Description: {"LocaleId":"en-US","Text":"The number of records encapsulated in a packet. by line transfer mode sends only one line per packet."}
+    Value: 20
+  - Name: Cfg_DataLoggerPullTime
+    Id: g=e5783cafb61c45f0c9a72953fdd2ab74
+    Type: BaseDataVariableType
+    DataType: Duration
+    Description: {"LocaleId":"en-US","Text":"The time interval after which data is taken from the data logger and stored in the auxiliary store. If PreserveDataLoggerHistory is set to True, the original data is deleted from the data logger after copying it to the auxiliary store."}
+    Value: "0:00:00:10.0000000"
+  - Name: Cfg_MaximumPublishTime
+    Id: g=e8052c438a27101e42e35ba5bed19ac2
+    Type: BaseDataVariableType
+    DataType: Duration
+    Description: {"LocaleId":"en-US","Text":"The maximum time interval after which data is taken from the auxiliary store and sent to the cloud. The interval is used when the auxiliary store has fewer records than MaximumItemsPerPacket."}
+    Value: "0:00:00:10.0000000"
+  - Name: Cfg_MinimumPublishTime
+    Id: g=2580d105e88b22956975bfcf6c78438b
+    Type: BaseDataVariableType
+    DataType: Duration
+    Description: {"LocaleId":"en-US","Text":"The minimum time interval after which data is taken from the auxiliary store and sent to the cloud. The interval is used when the auxiliary store has more records than MaximumItemsPerPacket. You may want to increase the sending frequency to download the queue of the store."}
+    Value: "0:00:00:02.0000000"
+  - Class: Method
+    Name: SyncAssets
+    Id: g=f4a1fdeff84009b837b7752e56842a49
+  - Name: Set_MeterReadingStoreAndSend
+    Id: g=89c5996919aae0a7f2bef8f8ac63f99c
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Description: {"LocaleId":"en-US","Text":"When true, Optix will turn on the Push agent sending of meter readings when runtime start."}
+  - Class: Method
+    Name: ClearPushAgentTempStore
+    Id: g=7df8861d787060f036aed4aa60f644ac
+  - Name: Set_AssetStatusAutoUpdate
+    Id: g=5dcca8f348837461f1bb5f4fab5a1d58
+    Type: BaseDataVariableType
+    DataType: Duration
+    Description: {"LocaleId":"en-US","Text":"When this duration is not set to 0, assets status and information are updated in the background with the defined duration as time interval."}
+    Value: "0:00:00:10.0000000"
+  - Name: Sts_AssetStatusUpdatePause
+    Id: g=1fafce7234ebbd2d1a0f640609c7d4d5
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Sts_PushAgentLastSendDatetime
+    Id: g=9cbaf559d8ea1ad636789fbb4ee42587
+    Type: BaseDataVariableType
+    DataType: DateTime
+    Value: "2000-01-01T00:00:00.0000000"
+  - Name: Sts_PushAgentLastSendResult
+    Id: g=f51d3086f9c4d2a388ffeac2b9cb1da2
+    Type: BaseDataVariableType
+    DataType: String
+  - Class: Method
+    Name: ClearDataLoggerStore
+    Id: g=9bc3ab14f2e2400cb5ab160292b77ec0
+- Name: Asset
+  Id: g=3ed36de785348d6f2225529201d70bc0
+  Supertype: BaseObjectType
+  Children:
+  - Name: strName
+    Id: g=dd2cb3c685d000281c8cfb910be71c24
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: id
+    Id: g=692debe57e08bf75776b068ee2049ce7
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: strCode
+    Id: g=5b574f3e7407952b4c4d3d3d9c2b5183
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: strAddressParsed
+    Id: g=4d8e6781ba7645e041d3adc323dddbf4
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: strTimezone
+    Id: g=41b614e8e8140a9aa7c02c5b7358888b
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: intCategoryID
+    Id: g=7fd8017cf821287cfdb3803c5082a79b
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: intSuperCategorySysCode
+    Id: g=7b8e2a9ab5c1cedfca4e243b9c08f1e8
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: intSiteID
+    Id: g=bd31fc64c97b77de26925d7f44060118
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: intAssetLocationID
+    Id: g=4caf55ef5100497343059ac1968c4763
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Class: Method
+    Name: AddEvent
+    Id: g=b3e990aed301220bc9880e0169ef5bcd
+    Children:
+    - Name: ns=0;InputArguments
+      Id: g=53b8e1f3b8a5be1d49328763f727a1a1
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"eventTypeID","DataType":{"Id":6},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"additionalDescription","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+  - Name: strDescription
+    Id: g=9c6d735291afcac02d766a0b25b291c4
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: strMake
+    Id: g=82c690934763172439af588281870bc2
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: strModel
+    Id: g=4cfcf2f5a1cdb36211c18e5df7c890a6
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: strInventoryCode
+    Id: g=7894488f3978c6179fd10ef359a35191
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: strBinNumber
+    Id: g=5ce4649244bcb7357f3ac5ce56e010c8
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: strSerialNumber
+    Id: g=0afbb42e5a34e49402d9901e16bcd48b
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: strRow
+    Id: g=b78f7d618485cf25c2fcee8e4eec2693
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: bolIsOnline
+    Id: g=91e69793bdfc321fdfd9a1e1b3db64bf
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: dtUpdated
+    Id: g=b99ec985cafaa663e963672f0716378b
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Class: Method
+    Name: SwitchOffline
+    Id: g=fd15b1239d2e49aa882fb736e71158dd
+  - Class: Method
+    Name: SwitchOnline
+    Id: g=9e4ea89c9fc5831df020429ea02f0bdc
+  - Name: Sts_LastActionResult
+    Id: g=b490ade600fd8e93c30a4fb473d8ef27
+    Type: BaseDataVariableType
+    DataType: String
+  - Class: Method
+    Name: AddMeterReading
+    Id: g=43e74c121b1250d6cd2f381d91a566f8
+    Children:
+    - Name: ns=0;InputArguments
+      Id: g=075c60250433f6988d16899f78ce09b0
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"analogVariableName","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+  - Name: Sts_LastActionDatetime
+    Id: g=b971179d2db18a17d30752ba77ca8f21
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Class: Method
+    Name: GetAssetEvents
+    Id: g=142dd69bb03a5a7297a497bd0f63ab4b
+    Children:
+    - Name: ns=0;InputArguments
+      Id: g=e3a2e70d4f210e4b811f316833d7b285
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"startDT","DataType":{"Id":13},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"endDT","DataType":{"Id":13},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+  - Class: Method
+    Name: GetMeterReadings
+    Id: g=b292f16a57cec553ca3f876319c5f64f
+    Children:
+    - Name: ns=0;InputArguments
+      Id: g=32839209346ef63c431b68775941cd3b
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"startDT","DataType":{"Id":13},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"endDT","DataType":{"Id":13},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+  - Name: strAisle
+    Id: g=c222e7c96c2b57ef81e0e361e5a57fe4
+    Type: BaseDataVariableType
+    DataType: String
+  - Class: Method
+    Name: UpdateRuntimeAsset
+    Id: g=b05953c8cc5f6ae9a5e7f19c3a1cddd7
+  - Class: Method
+    Name: AddOfflineTracker
+    Id: g=a9f205cde71b8d8c7a383031dcebf5be
+    Children:
+    - Name: ns=0;InputArguments
+      Id: g=ef10b39997cfe1d6c2dcdaf8edd7e489
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"reasonOfflineID","DataType":{"Id":6},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"workOrderID","DataType":{"Id":6},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"additionalInfo","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+  - Name: AssetDesignTimeLogic
+    Id: g=1d78588ff6d08d225eb5c3187a80c25f
+    Type: NetLogic
+    Children:
+    - Name: BehaviourStartPriority
+      Id: g=a65dbb85ce4bc62ec8fd0384695f663b
+      Type: BehaviourStartPriorityVariableType
+      DataType: Byte
+      Value: 180
+    - Class: Method
+      Name: AddVariablesToDataLogger
+      Id: g=2f8b9ab395336b8bb13ab85cc8c84c86
+  - Class: Method
+    Name: CloseOfflineTracker
+    Id: g=9f86b36d6e3cda23063f83b2944d453c
+    Children:
+    - Name: ns=0;InputArguments
+      Id: g=648e5056c2c67ee11bce5127d8eae1d3
+      Type: BaseVariableType
+      DataType: Argument
+      ReferenceType: HasProperty
+      ValueRank: OneDimension
+      ArrayDimensions: [0]
+      Value: [{"TypeId":{"Id":296},"Body":{"Name":"reasonOnlineID","DataType":{"Id":6},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"additionalInfo","DataType":{"Id":12},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":296},"Body":{"Name":"hoursAffected","DataType":{"Id":11},"ValueRank":-1,"ArrayDimensions":[],"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]
+- Name: AssetCategory
+  Id: g=0bbac353d5b28806b04f581eddeef354
+  Supertype: BaseObjectType
+  Children:
+  - Name: id
+    Id: g=b5d6eb9250e53b5cd0de9b743df67949
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: strUuid
+    Id: g=dda0b4a23108de215fe50a917d95eeec
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: strName
+    Id: g=8b4c17de281f801e148821011a871efa
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: intSysCode
+    Id: g=757205aa2ec9e68dec6703c8deae5e23
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: intParentID
+    Id: g=d83a648136bbb9fa2af6b2cc1489d91e
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: Cfg_enabled
+    Id: g=50e2fa6d4416baac3125043d27617b2c
+    Type: BaseDataVariableType
+    DataType: Boolean
+- Name: AssetEventType
+  Id: g=055bff988e93128b81ace03411cda5c2
+  Supertype: BaseObjectType
+  Children:
+  - Name: id
+    Id: g=dd999a7b14d6e6b8971a88fffa6724e8
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: strEventName
+    Id: g=97fb3f48da73a099d318c4d8d463d3e1
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: strUniqueKey
+    Id: g=23810eb24984a619fdb9839de9bc3e25
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: strEventCode
+    Id: g=3a5386915191a6b1c266658ab16204cd
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: strEventDescription
+    Id: g=dcc5876e53b36e8c127ed0e12ddfeae0
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+- Name: AssetOfflineReason
+  Id: g=906614dbe0de4eb3cc635514eb72c43a
+  Supertype: BaseObjectType
+  Children:
+  - Name: id
+    Id: g=23a7678cce522223b935440ba95fd957
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: strName
+    Id: g=e52ab03957ddac16a7dd21dc7880bae7
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: dtUpdated
+    Id: g=752ebbfc645c68063aca88e3d56b5e79
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Name: strUuid
+    Id: g=01657d7d01652154ab8474915ed2165e
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+- Name: AssetEvent
+  Id: g=21ca8e41d9417701750064448c720bad
+  Supertype: BaseObjectType
+  Children:
+  - Name: strEventName
+    Id: g=f476c12ed5016eebcb4842b4ef705f9f
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "0"
+  - Name: dtmDateSubmitted
+    Id: g=66cd01ec68b71d3922abd1a33bc261b3
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Name: strAdditionalDescription
+    Id: g=98122bc29ede10ee697a407e69e91b6d
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: strEventCode
+    Id: g=18c0b9f491c4bda0a9dffc8b3939fd4b
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: strEventDescription
+    Id: g=e500bfd7276499a5e931b4b1a718fd9d
+    Type: BaseDataVariableType
+    DataType: String
+- Name: MeterReading
+  Id: g=02f7f4c97ee92f3c409a3fe7ce85df10
+  Supertype: BaseObjectType
+  Children:
+  - Name: dblMeterReading
+    Id: g=0672c8b17c018113566cf079002ab94e
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: dtmDateSubmitted
+    Id: g=831391a985f0417e02e747c60d6ae7c1
+    Type: BaseDataVariableType
+    DataType: DateTime
+  - Name: strUnitName
+    Id: g=f070e8e4939a11602632d90f78b551ed
+    Type: BaseDataVariableType
+    DataType: String

@@ -1,0 +1,62 @@
+Name: AssetEventTypes
+Id: g=1a06cd0f24d765dd2cec17be5d5fc9e7
+Type: FolderType
+Children:
+- Name: 'OH01 - Overheating'
+  Id: g=570ec1e00b0c4b54aa815ba09402fccc
+  Type: AssetEventType
+  Children:
+  - Name: id
+    Id: g=62f691b175bac6a737b33781f13a09ea
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 209612
+  - Name: strEventName
+    Id: g=178e5e7dc6209dbe6505916f6195a183
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Overheating"
+  - Name: strUniqueKey
+    Id: g=4481fc8c3099903b732f66316d897b48
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "OH01"
+  - Name: strEventCode
+    Id: g=25ac0db15a8c29301b107d1c0f9f3c95
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "OH01"
+  - Name: strEventDescription
+    Id: g=f052d303c5c02371d7cb0e8743b86fab
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Overheating from automation system"
+- Name: 'NF01 - Network Failure'
+  Id: g=1a1366d81a2346fba68fe77bdad5ff3a
+  Type: AssetEventType
+  Children:
+  - Name: id
+    Id: g=115219679e0eca2e26cac2f7e796dcbe
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 212704
+  - Name: strEventName
+    Id: g=a052754ec86eaaaf3b52555dc3ea226e
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Network Failure"
+  - Name: strUniqueKey
+    Id: g=36e2cb7411773a48645f3e3bfcb124da
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "NF01"
+  - Name: strEventCode
+    Id: g=23954c215b7b99bf8cdd5360dd97cce7
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "NF01"
+  - Name: strEventDescription
+    Id: g=ed2a5e3b7882c45f6089474b813ed8fa
+    Type: BaseDataVariableType
+    DataType: String
+    Value: "Network failure on data center"

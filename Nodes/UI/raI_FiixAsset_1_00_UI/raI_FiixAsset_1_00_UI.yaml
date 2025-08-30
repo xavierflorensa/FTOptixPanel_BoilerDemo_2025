@@ -1,0 +1,665 @@
+Name: raI_FiixAsset_1_00_UI
+Id: g=6f1d7d46b4d35713d8d952a9e83f60ef
+Type: FolderType
+Children:
+- Name: raI_FiixAsset_1_00_Faceplate
+  Id: g=4d784c90e03ad1b7ca60ecdddec8ea60
+  Supertype: raSDK1_DialogBoxBase
+  Description: {"LocaleId":"en-US","Text":"Faceplate dialog base type with predefined alias, border, header, and background."}
+  ReferenceType: HasComponent
+  Children:
+  - Name: raSDK1_DialogBox
+    Id: g=86904f5d944a24be029de7c4adafb123
+    Type: Alias
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Id: g=973abd0d9c0cbe50dd0f66c8e9920223
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Objects/FTOptixPanel_BoilerDemo_2025/Model/raI_Fiix_1_00_Model/Template/Asset"
+  - Name: Canvas
+    Id: g=02a70c5645ed5fbf1921899222812b04
+    Type: Screen
+    Children:
+    - Name: VerticalLayout
+      Id: g=5687be3ff8f7801e8776a40ca8f80daf
+      Type: ColumnLayout
+      Children:
+      - Name: Header
+        Id: g=074124305c818aa7e1be5dbabb4bea8c
+        Type: Rectangle
+        Children:
+        - Name: FillColor
+          Id: g=d51fc34cd87e90e05a519e907c0f2016
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#afafaf"
+        - Name: MoveTarget
+          Id: g=36d73ea4c6d975487c8ccc0678b674b8
+          Type: NodePointer
+          DataType: NodeId
+          Children:
+          - Name: Kind
+            Id: g=e744093c7fa9244d642b43ed5fc54e97
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+          - Name: DynamicLink
+            Id: g=ee9454d4c67d4132190b9887bee85024
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../..@NodeId"
+        - Name: Height
+          Id: g=51ed53c52053d62b5f209e0dfbfb490a
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: -1.0
+      - Name: NavigationPanel
+        Id: g=1949f9dab9062d33155753be605c4a12
+        Type: NavigationPanel
+        Children:
+        - Name: Panels
+          Id: g=01fa19776b5d815d05bd8368fdc48c84
+          Type: BaseObjectType
+          Children:
+          - Name: Home
+            Id: g=b27b58911b0ecf3cbf8179d96d5d0084
+            Type: NavigationPanelItem
+            Children:
+            - Name: Title
+              Id: g=e3dc18e3f7119ba52c87c7bee6ec3142
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+            - Name: Panel
+              Id: g=c0c9f1da06f2b56ebf0b6c96d9bd4fb8
+              Type: NodePointer
+              DataType: NodeId
+              Value: "/Objects/FTOptixPanel_BoilerDemo_2025/UI/raI_FiixAsset_1_00_UI/<PrivateElements&>/PanelsFaceplate/raI_FiixAsset_1_00_Home"
+              Children:
+              - Name: Kind
+                Id: g=12290b9ecd9804b080a9eff36fd1d6a4
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+            - Name: ImagePath
+              Id: g=f6e5662e6ac9be292bf41555ff0585f5
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              ModellingRule: Optional
+              Value: "ns=39;%PROJECTDIR%/res/Nav_Oper.svg"
+          - Name: MeterReading
+            Id: g=c3c90952dbe6be9820e782231d753a9c
+            Type: NavigationPanelItem
+            Children:
+            - Name: Title
+              Id: g=1753c85a0cf1c88dbbdaaf4ddc373b78
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Value: {"LocaleId":"en-US","Text":""}
+            - Name: Panel
+              Id: g=812df66f08f4dcf09a9e2b01bb3c7a94
+              Type: NodePointer
+              DataType: NodeId
+              Value: "/Objects/FTOptixPanel_BoilerDemo_2025/UI/raI_FiixAsset_1_00_UI/<PrivateElements&>/PanelsFaceplate/raI_FiixAsset_1_00_MeterReading"
+              Children:
+              - Name: Kind
+                Id: g=bcb50d77cbab129e123fb0edc4c43658
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+            - Name: ImagePath
+              Id: g=4a657a2b43d8d15e8eabf655707a176a
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              ModellingRule: Optional
+              Value: "ns=39;%PROJECTDIR%/res/Nav_Sine.svg"
+          - Name: Event
+            Id: g=e1e9e3edb4a241beb8fe9c13ca413776
+            Type: NavigationPanelItem
+            Children:
+            - Name: Title
+              Id: g=ba2255d41b9551f6a7c457ecb25c1078
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+            - Name: Panel
+              Id: g=1e264ccee90d2b2f9b9fa782e814edbb
+              Type: NodePointer
+              DataType: NodeId
+              Value: "/Objects/FTOptixPanel_BoilerDemo_2025/UI/raI_FiixAsset_1_00_UI/<PrivateElements&>/PanelsFaceplate/raI_FiixAsset_1_00_Event"
+              Children:
+              - Name: Kind
+                Id: g=d6bc1c00632e33f8ef8ae0fff5c7c3e9
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+            - Name: ImagePath
+              Id: g=a00b5401d33df732fd752fe4050f79fc
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              ModellingRule: Optional
+              Value: "ns=39;%PROJECTDIR%/res/Nav_Pwr.svg"
+          - Name: MeterReadingTrend
+            Id: g=0bcadc03cc6a13de95422cda93afce57
+            Type: NavigationPanelItem
+            Children:
+            - Name: Title
+              Id: g=d3839e26f9379a8c9e1c670591bb2aa0
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+            - Name: Panel
+              Id: g=67f09e07be878968a4d7d128d2012d52
+              Type: NodePointer
+              DataType: NodeId
+              Value: "/Objects/FTOptixPanel_BoilerDemo_2025/UI/raI_FiixAsset_1_00_UI/<PrivateElements&>/PanelsFaceplate/raI_FiixAsset_1_00_MeterReadingTrend"
+              Children:
+              - Name: Kind
+                Id: g=b2da790edca434c1ed20a88f9a9d9510
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+            - Name: ImagePath
+              Id: g=75e728885f644a37eddffdd0996e4c76
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              ModellingRule: Optional
+              Value: "ns=39;%PROJECTDIR%/res/Nav_Trend.svg"
+          - Name: EventHistory
+            Id: g=f96c76a2ee3347f002b03ae143955a73
+            Type: NavigationPanelItem
+            Children:
+            - Name: Title
+              Id: g=8123870b38b2b189781d91197ac95274
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+            - Name: Panel
+              Id: g=f4b7e3e19e013bc8bf1809cc5c0f3f62
+              Type: NodePointer
+              DataType: NodeId
+              Value: "/Objects/FTOptixPanel_BoilerDemo_2025/UI/raI_FiixAsset_1_00_UI/<PrivateElements&>/PanelsFaceplate/raI_FiixAsset_1_00_EventHistory"
+              Children:
+              - Name: Kind
+                Id: g=ecd8531ec47e7abfca9b3fe86f10a51f
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+            - Name: ImagePath
+              Id: g=da656553d1384dbc9da59001bf7c4a96
+              Type: BaseDataVariableType
+              DataType: ResourceUri
+              ModellingRule: Optional
+              Value: "ns=39;%PROJECTDIR%/res/Nav_ViewDetails.svg"
+        - Name: CurrentPanel
+          Id: g=241028842b18402449f0c49e1bcec4b4
+          Type: NodePointer
+          DataType: NodeId
+          AccessLevel: Read
+          Children:
+          - Name: Kind
+            Id: g=0e74af617971549aa213915ceb890181
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
+        - Name: CurrentTabIndex
+          Id: g=4e55a64d614f09f70e34356234c33de9
+          Type: BaseDataVariableType
+          DataType: Int32
+        - Class: Reference
+          Target: ns=11;i=1181
+          Direction: Forward
+        - Class: Reference
+          Target: ns=11;i=1183
+          Direction: Forward
+        - Name: Width
+          Id: g=36c4d327d4942a95b96394803d763a23
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 300.0
+        - Name: Height
+          Id: g=491e4e0113503548f1f6332c86b1d4ae
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 300.0
+        - Name: HorizontalAlignment
+          Id: g=aad1b0d4615bffbff8bd79087c4d81b0
+          Type: BaseVariableType
+          DataType: HorizontalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: VerticalAlignment
+          Id: g=3d314c3bc322c120103c19018e9be333
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 3
+        - Name: TabHeight
+          Id: g=d3e665ae93a0e03d270d7af05739a662
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 44.0
+        - Name: TabPosition
+          Id: g=665efd72bda1a09d7647964c18c65728
+          Type: BaseVariableType
+          DataType: NavigationPanelTabPositionEnum
+          ModellingRule: Optional
+          Value: 2
+        - Name: TabWidth
+          Id: g=2173e6d3eaca2ac360daea6364183f80
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 44.0
+      - Name: BottomMargin
+        Id: g=01c9b803f880432b597afb1de69042d0
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 2.0
+      - Name: LeftMargin
+        Id: g=69ad1252d1fc8e32fae7a22b820d9be1
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 2.0
+      - Name: RightMargin
+        Id: g=043ab51e4a29fb08d6b356fe8fee8371
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 2.0
+      - Name: TopMargin
+        Id: g=ef1e024d5bc4850bed3ef1bab0f5f963
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 2.0
+      - Name: DisplayPanel
+        Id: g=8bb42b787eca6800c01af33a9dec7be0
+        Type: Panel
+        Children:
+        - Name: Visible
+          Id: g=5323e466edbb2c320597d638b140f9fc
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ModellingRule: Optional
+        - Name: VerticalAlignment
+          Id: g=ee804e7a205eb22c91ff5a5475796c14
+          Type: BaseVariableType
+          DataType: VerticalAlignment
+          ModellingRule: Optional
+          Value: 1
+    - Name: BackgroundColor
+      Id: g=c48cf433ce8ee15d617ac58be79588c2
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#e0e0e0"
+    - Name: HorizontalAlignment
+      Id: g=a6a33722b3390245dffc9f90bf9da4fa
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Id: g=3f39110bec6740d429dba08cc056f827
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: BorderThickness
+      Id: g=c0f78733bdcfc4db3d532b308eedf9ed
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 2.0
+    - Name: BorderColor
+      Id: g=a6581fd1890d9be1cb3f5a0aae397d28
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#afafaf"
+  - Class: Reference
+    Target: ns=11;i=519
+    Direction: Forward
+  - Name: Height
+    Id: g=f1ca3adba417377a02bb9eadfbdd3ad5
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 365.0
+  - Name: Width
+    Id: g=1d4a12a65c2ebb810fc6e52ee0b5ca53
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 570.0
+  - Name: MoveTarget
+    Id: g=d6e62a66ea43454aa5344a785231a487
+    Type: NodePointer
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Id: g=db70a8072ff9b4233eaf528642bb6dbb
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+  - Name: Cfg_HelpPanel
+    Id: g=e23e000e287fd30a00780ceceada5fb8
+    Type: BaseDataVariableType
+    DataType: NodeId
+  - Name: Enabled
+    Id: g=05d658b198b4fd5ba82a86f5c35d29d6
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
+  - Name: HelpScreen
+    Id: g=69eb4b472adc8e3f22a31a14a1bf8318
+    Type: Screen
+    Children:
+    - Name: Border
+      Id: g=e7f271ce2b10210922cf04985475829e
+      Type: Rectangle
+    - Name: VerticalLayout1
+      Id: g=075b978429842cc41b4e23862f848c0c
+      Type: ColumnLayout
+      Children:
+      - Name: Header
+        Id: g=c0bfaae1572adf82905e181769997c63
+        Type: Rectangle
+        Children:
+        - Name: HorizontalLayout
+          Id: g=caef08588213e2c92d0a42e6d71c988c
+          Type: RowLayout
+          Children:
+          - Name: Title
+            Id: g=27b6b134232064372efa0a3a07318545
+            Type: Label
+            Children:
+            - Name: Text
+              Id: g=d9a0b5bdb63517f6133d2677527c1705
+              Type: BaseDataVariableType
+              DataType: LocalizedText
+              Children:
+              - Name: DynamicLink
+                Id: g=4d7a340a57263d46368a3a53304e57bc
+                Type: DynamicLink
+                DataType: NodePath
+                Value: "../../../../../../Canvas/VerticalLayout/Header/HorizontalLayout/Title/Text"
+          - Name: MoveTarget
+            Id: g=281b26adb8dc2df5972826fdcb28073b
+            Type: NodePointer
+            DataType: NodeId
+            Children:
+            - Name: Kind
+              Id: g=0cfef0e06df5567f8ba8fa29e9dc7d95
+              Type: PropertyType
+              DataType: NodeId
+              Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+          - Name: Close
+            Id: g=ac7c1cdcabb2a47df32c60cd7d1105ee
+            Type: Button
+            Children:
+            - Name: MouseClickEventHandler1
+              Id: g=5080be951859fa6348092f0353a347f4
+              Type: EventHandler
+              Children:
+              - Name: ListenEventType
+                Id: g=6acd849261b0aa03a14db132c68d616a
+                Type: PropertyType
+                DataType: NodeId
+                Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseClickEvent"
+              - Name: MethodsToCall
+                Id: g=bdd9444e3d1245d4b9f932c9788f3d60
+                Type: BaseObjectType
+                Children:
+                - Name: MethodContainer1
+                  Id: g=c23048eba6c7c5870c842bc273461083
+                  Type: BaseObjectType
+                  Children:
+                  - Name: ObjectPointer
+                    Id: g=9c9f94da967827135ee56cdb7365032f
+                    Type: NodePointer
+                    DataType: NodeId
+                    Value: "/Objects/Commands/VariableCommands"
+                    Children:
+                    - Name: Kind
+                      Id: g=8a14cac83a430ff5239d2311e96ba4c1
+                      Type: PropertyType
+                      DataType: NodeId
+                      Value: "/Types/ObjectTypes/BaseObjectType"
+                  - Name: Method
+                    Id: g=c8fead8b08126a9274f000d764d21154
+                    Type: BaseDataVariableType
+                    DataType: String
+                    Value: "Set"
+                  - Name: InputArguments
+                    Id: g=b1c3611ab323f44bfa73071d07a438b6
+                    Type: BaseObjectType
+                    Children:
+                    - Name: VariableToModify
+                      Id: g=836588e3656bc5e6209d12a169ab1810
+                      Type: BaseDataVariableType
+                      DataType: VariablePointer
+                      Children:
+                      - Name: DynamicLink
+                        Id: g=293275ca1ac8bfaf3b8f7f8bcdbf698a
+                        Type: DynamicLink
+                        DataType: NodePath
+                        Value: "../../../../../../../../../Visible@NodeId"
+                    - Name: Value
+                      Id: g=958d2d690fcbc3386283a8e43575bacd
+                      Type: BaseDataVariableType
+                      DataType: Boolean
+                    - Name: ArrayIndex
+                      Id: g=6bc99502b0183b2672ebd646a21c257d
+                      Type: BaseDataVariableType
+                      DataType: UInt32
+                      ValueRank: ScalarOrOneDimension
+              - Name: EventArguments
+                Id: g=94f5ec92fac6377bdf6afd8b59e0338b
+                Type: MouseClickEvent
+                Children:
+                - Name: EventId
+                  Id: g=545d6fc655e8c92f67d04d733ad4d29b
+                  Type: PropertyType
+                  DataType: ByteString
+                - Name: EventType
+                  Id: g=0c2c822ce02f5147b5f2229fb4fc3087
+                  Type: PropertyType
+                  DataType: NodeId
+                - Name: SourceNode
+                  Id: g=08af1092a92b1952152cae44a1617830
+                  Type: PropertyType
+                  DataType: NodeId
+                - Name: SourceName
+                  Id: g=09049f07495109f36cc1eb42e96f67d6
+                  Type: PropertyType
+                  DataType: String
+                - Name: Time
+                  Id: g=609cd7cd4b91f0ab0a375f4e1b234b67
+                  Type: PropertyType
+                  DataType: UtcTime
+                - Name: ReceiveTime
+                  Id: g=6ce0106768c07e637ce176bce682a719
+                  Type: PropertyType
+                  DataType: UtcTime
+                - Name: Message
+                  Id: g=d841fbe7d2fa8a165d055fbc2c8a1b0d
+                  Type: PropertyType
+                  DataType: LocalizedText
+                - Name: Severity
+                  Id: g=e129e4eaac7710a4b12e350509b05e72
+                  Type: PropertyType
+                  DataType: UInt16
+        - Name: FillColor
+          Id: g=4ed8c8ab9e725cafb497ffbb7ab5559e
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#afafaf"
+        - Name: MoveTarget
+          Id: g=0e9661292ffb2de3e654b1bca78b9879
+          Type: NodePointer
+          DataType: NodeId
+          Children:
+          - Name: DynamicLink
+            Id: g=60f93c0e0e4f71006526b59dcd003b16
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../..@NodeId"
+      - Name: HelpPanelLoader
+        Id: g=c63bfa9f8f084f01ce72e36c68371e67
+        Type: PanelLoader
+        Children:
+        - Name: Panel
+          Id: g=d8c5337750699a01e0b476025a6a8f08
+          Type: NodePointer
+          DataType: NodeId
+          Children:
+          - Name: Kind
+            Id: g=865446c01e949ad8861579f86dcf04d9
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+          - Name: DynamicLink
+            Id: g=a21096aaffb0e18ae19a36f75acf31a0
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Cfg_HelpPanel@Pointer"
+        - Name: CurrentPanel
+          Id: g=23896d5566b50a21f553b16db731061f
+          Type: NodePointer
+          DataType: NodeId
+          AccessLevel: Read
+          Children:
+          - Name: Kind
+            Id: g=879530a9ee187ca5160a9dbef385e330
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
+        - Class: Reference
+          Target: ns=11;i=478
+          Direction: Forward
+      - Name: Footer
+        Id: g=db0db00337112a2629b123fc4a83e37b
+        Type: Rectangle
+        Children:
+        - Name: FillColor
+          Id: g=e39d503164178a401e8097ff63444968
+          Type: BaseDataVariableType
+          DataType: Color
+          Value: "#afafaf"
+        - Name: MoveTarget
+          Id: g=84377c01fae643140cd4b8787d243a92
+          Type: NodePointer
+          DataType: NodeId
+          Children:
+          - Name: Kind
+            Id: g=d240130e9161f99ecdc743fc833f59fc
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+          - Name: DynamicLink
+            Id: g=e426200e873346c1696bfe2a3acf4e1a
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../..@NodeId"
+        - Name: Version
+          Id: g=6a942d0964d08915247940ed83d76b10
+          Type: RowLayout
+          Children:
+          - Name: VerticalLayout
+            Id: g=59212e63bf2bd5d97bd802db6315b857
+            Type: ColumnLayout
+            Children:
+            - Name: Description
+              Id: g=7194196c2ea443ca75b0063dca9a290b
+              Type: Label
+              Children:
+              - Name: Text
+                Id: g=a4f00a8ccb8fc843b281af827d301813
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                Children:
+                - Name: DynamicLink
+                  Id: g=39e0e8415cb32ec54bac21d46cc91c21
+                  Type: DynamicLink
+                  DataType: NodePath
+                  Value: "../../../../../../../Cfg_Description"
+            - Name: NameAndVersion
+              Id: g=6184dfed364710d1bf7916daf3a16ba9
+              Type: Label
+              Children:
+              - Name: Text
+                Id: g=744ae986d0fc7ac80338e1fe44dd584f
+                Type: BaseDataVariableType
+                DataType: LocalizedText
+                Children:
+                - Name: StringFormatter1
+                  Id: g=3bfa5b34a37f89d8e0afa672700bd04b
+                  Type: StringFormatter
+                  Children:
+                  - Name: Source0
+                    Id: g=f021a429d117b62fd3f498a050dc2ab1
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=9c55e374e506faeb02dce67e284aaa57
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../../../../../..@BrowseName"
+                  - Name: Source1
+                    Id: g=e871ead62b41e23d18d23eda56a236df
+                    Type: BaseDataVariableType
+                    DataType: BaseDataType
+                    ReferenceType: HasSource
+                    Children:
+                    - Name: DynamicLink
+                      Id: g=0967ce2fc0d084d60554a1a1f825e4d7
+                      Type: DynamicLink
+                      DataType: NodePath
+                      Value: "../../../../../../../../../Cfg_ObjectVersion"
+          - Name: VerticalLayout1
+            Id: g=15e553bfe8267b4e6777b4c542cb3555
+            Type: ColumnLayout
+            Children:
+            - Name: Copyright
+              Id: g=ea152f78b2f6ce9f7dd6a9d42da734d1
+              Type: Label
+    - Name: Visible
+      Id: g=b788e92d6f9bc6081e927f827d2b83dd
+      Type: BaseDataVariableType
+      DataType: Boolean
+  - Name: Cfg_ObjectVersion
+    Id: g=b840ebe1785aa88d98d8b3cc828db0eb
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: Cfg_Description
+    Id: g=bcdc7d5a03a22c8b2bb1378c2f27df37
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+- File: GraphicSymbols/GraphicSymbols.yaml
+- File: _PrivateElements_/_PrivateElements_.yaml
+- Name: ns=23;LibraryReference
+  Id: g=ef30fe4ea4465d19afba6365d857b03e
+  Type: ObjectLibraryReference
+  DataType: ObjectLibraryReferenceDataType
+  Value: 
+   {
+    "TypeId": {
+     "Id": 72,
+     "Namespace": 23
+    },
+    "Body": {
+     "libraryGuid": "8a9c64e7c7f6d51fe56d22b946637243",
+     "objectGuid": "8644f1915dda1f55f9431490a577ffed",
+     "objectVersion": 1,
+     "highestIgnoredVersion": 0
+    }
+   }

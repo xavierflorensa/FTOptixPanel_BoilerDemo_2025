@@ -1,0 +1,6 @@
+Name: <PrivateElements>
+Id: g=012069989bb39752d40a7ab165056cae
+Type: FolderType
+Children:
+- File: PanelsFaceplate/PanelsFaceplate.yaml
+- File: Widgets/Widgets.yaml
