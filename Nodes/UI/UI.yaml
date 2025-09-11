@@ -351,7 +351,7 @@ Children:
     Id: g=7a683355c34ec2814fe5794053bd3dfe
     Type: BaseDataVariableType
     DataType: UInt16
-    Value: 8443
+    Value: 8440
   - Name: StartWindow
     Id: g=b3dc78a3cfe68f3348c24beac89895c2
     Type: NodePointer
